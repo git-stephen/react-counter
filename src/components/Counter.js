@@ -8,8 +8,28 @@ class Counter extends Component
         this.state = {
             count:0
         }
+
+        console.log('constructor is called');
     }
+
+    componentWillMount(){
+        console.log('componentWillMount is called');
+        this.setState(
+            {
+            count : this.state.count + 1
+            }
+        )
+      }
     
+      componentDidMount(){
+        console.log('componentDidMount is called');
+        this.setState(
+            {
+            count : this.state.count + 1
+            }
+        )
+      }
+
     IncreaseCount()
     {
         this.setState(
